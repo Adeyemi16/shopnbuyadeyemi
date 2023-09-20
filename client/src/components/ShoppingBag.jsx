@@ -32,7 +32,7 @@ const ShoppingBag = () => {
     <>
       <div
         className="position-relative mx-3"
-        onClick={location.pathname !== "/bag" && handleShow}
+        onClick={location.pathname === "/bag" ? null : handleShow}
       >
         <BiShoppingBag style={{ cursor: "pointer" }} size="24px" />
         <h6 className="position-absolute top-0 start-100 translate-middle fs-6">

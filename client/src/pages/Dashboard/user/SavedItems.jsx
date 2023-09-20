@@ -96,7 +96,7 @@ export default function SavedItems() {
                       <Button
                         variant="dark"
                         className="rounded-0"
-                        onClick={addToBag}
+                        onClick={() => addToBag(item)}
                       >
                         ADD TO BAG
                       </Button>
