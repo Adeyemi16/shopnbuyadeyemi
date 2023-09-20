@@ -1,0 +1,16 @@
+import Home from './Home'
+import Collections from './Collections'
+import Categories from './Categories'
+import Bag from './Bag'
+import Checkout from './Checkout'
+import Orders from './Dashboard/user/Orders'
+import OrderId from './Dashboard/user/OrderId'
+import Account from './Dashboard/Account'
+import SavedItems from './Dashboard/user/SavedItems'
+import Profile from './Dashboard/user/Profile'
+import Shoporders from './Dashboard/admin/Shoporders'
+import ManageProduct from './Dashboard/admin/ManageProduct'
+import CreateProduct from './Dashboard/admin/CreateProduct'
+import Search from './Search'
+
+export { Home, Collections, Categories, Bag, Checkout, Orders, OrderId, Account, SavedItems, Profile, Shoporders, ManageProduct, CreateProduct, Search }
