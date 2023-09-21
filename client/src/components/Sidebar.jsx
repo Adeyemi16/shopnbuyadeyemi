@@ -69,7 +69,7 @@ export default function Sidebar() {
               {links.map((item, i) => (
                 <div key={i} className="mb-3">
                   <NavLink
-                    to={`${item.path}`}
+                    to={`/account/${item.path}`}
                     className={({ isActive }) =>
                       isActive
                         ? "text-success fw-bold fs-5"
