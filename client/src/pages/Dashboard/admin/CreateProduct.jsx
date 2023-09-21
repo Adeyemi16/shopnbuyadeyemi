@@ -23,7 +23,6 @@ export default function CreateProduct() {
     document.title = "Add new product to database";
   }, []);
 
-  
   const addExtra = () => {
     if (extra !== "") {
       setSeeExtra(seeExtra, seeExtra.push(extra));
@@ -55,18 +54,18 @@ export default function CreateProduct() {
       if (res.status === 201) {
         toast.success("Product created successfully");
         reset(data);
-        
       }
-      
     } catch (error) {
       console.log(error);
       toast.error("there was a problem");
+      setError(error);
     } finally {
       setloading(false);
     }
   };
-  { error && <p className="mt-5 fs-5">{ error.message}</p>}
-
+  {
+    error && <p className="mt-5 fs-5">{error.message}</p>;
+  }
 
   return (
     <div className="py-3">

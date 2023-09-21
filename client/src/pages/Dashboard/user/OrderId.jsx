@@ -115,7 +115,7 @@ export default function OrderId() {
                 Delivery Fee: {formatCurrency(data.shippingPrice)}
               </p>
               <p className="fs-6 fw-bold">
-                Total: {formatCurrency(data.totalPrice)}
+                Total: {formatCurrency(data.price)}
               </p>
             </>
           </Col>

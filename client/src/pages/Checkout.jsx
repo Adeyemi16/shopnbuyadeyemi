@@ -51,14 +51,14 @@ export default function Checkout() {
     Number(calcTax) +
     Number(shippingFee)
   ).toFixed(2);
-  
+
   const order = {
     orderItems: cartItems,
     paymentMethod: paymentMethod,
     taxPrice: calcTax,
     shippingPrice: shippingFee,
     shippingDetails: shippingDetails,
-    totalPrice: total,
+    price: total,
   };
 
   const placeOrder = async () => {
@@ -68,7 +68,9 @@ export default function Checkout() {
       if (res.status === 201) {
         toast.success("Order successful");
         setCartItems([]);
-        navigate(`/account/${currentUser?.user?.username}/orders/${res.data?._id}`);
+        navigate(
+          `/account/${currentUser?.user?.username}/orders/${res.data?._id}`
+        );
       }
     } catch (error) {
       toast.error("something went wrong");
