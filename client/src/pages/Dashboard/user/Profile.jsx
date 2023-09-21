@@ -22,22 +22,25 @@ export default function Profile() {
   error && <p className="mt-5 fs-5">{error.message}</p>;
   return (
     <div>
-      {loading && <Loader />}
-      <Row className="align-items-center justify-content-around gy-2">
-        <Col md={12} className="text-center  mb-4">
-          <Image
-            src={data?.profileImg}
-            className="rounded-circle object-fit-cover mb-4 shadow"
-            style={{ width: "100px", height: "100px" }}
-          />
-          <h1 className="fs-5 fw-bold">{data.username}</h1>
-          <p className="fs-5 fw-bold">{data.email}</p>
-          <p className="fs-5">Date registered: {format(data.createdAt)}</p>
-        </Col>
-        <Col md={6} lg={5}>
-          <UpdateProfile />
-        </Col>
-      </Row>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Row className="align-items-center justify-content-around gy-2">
+          <Col md={12} className="text-center  mb-4">
+            <Image
+              src={data?.profileImg}
+              className="rounded-circle object-fit-cover mb-4 shadow"
+              style={{ width: "100px", height: "100px" }}
+            />
+            <h1 className="fs-5 fw-bold">{data.username}</h1>
+            <p className="fs-5 fw-bold">{data.email}</p>
+            <p className="fs-5">Date registered: {format(data.createdAt)}</p>
+          </Col>
+          <Col md={6} lg={5}>
+            <UpdateProfile />
+          </Col>
+        </Row>
+      )}
     </div>
   );
 }

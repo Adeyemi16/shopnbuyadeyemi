@@ -24,7 +24,7 @@ export default function Routespath() {
     {
       path: "/",
       element: <Root />,
-      errorElement: <Error/>,
+      errorElement: <Error />,
       children: [
         {
           path: "/",
@@ -32,19 +32,11 @@ export default function Routespath() {
         },
         {
           path: "collections",
-          element: (
-            <ProtectedRoutes>
-              <Collections />
-            </ProtectedRoutes>
-          ),
+          element: <Collections />,
           children: [
             {
               path: ":collectionName",
-              element: (
-                <ProtectedRoutes>
-                  <Categories />
-                </ProtectedRoutes>
-              ),
+              element: <Categories />,
             },
             {
               path: ":collectionName/:slug",
