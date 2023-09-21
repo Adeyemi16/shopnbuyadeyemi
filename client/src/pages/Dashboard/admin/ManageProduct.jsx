@@ -69,7 +69,7 @@ export default function ManageProduct() {
                       <td>
                           {formatCurrency(product.price)}
                       </td>
-                      <td><Button variant="danger" className="rounded-0 fw-medium" onClick={()=> handleDelete(product._id)}>DELETE</Button></td>
+                      <td><Button variant="danger" className="rounded-0 fw-medium w-100" onClick={()=> handleDelete(product._id)}>DELETE</Button></td>
               </tr>
             </tbody>
           ))}

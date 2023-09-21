@@ -97,7 +97,7 @@ export default function Shoporders() {
                       <Button
                         disabled={order.isDelivered === true}
                         variant={order.isDelivered ? "success" : "warning"}
-                        className="rounded-0 fw-bold"
+                        className="rounded-0 fw-bold w-100"
                         onClick={() => handleOrderUpdate(order._id)}
                       >
                         {order.isDelivered && "COMPLETED"}
