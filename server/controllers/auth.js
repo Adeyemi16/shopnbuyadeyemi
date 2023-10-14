@@ -32,13 +32,6 @@ export const registerUser = async (req, res, next) => {
 
         const access_token = generateToken(user._id)
         res.status(201).json({ access_token, user, msg: 'User registration successful' })
-
-        // const user = {
-        //     _id: newUser._id,
-        //     username: newUser.username,
-        //     email: newUser.email,
-
-        // }
     } catch (error) {
         res.status(500).json(error)
     }

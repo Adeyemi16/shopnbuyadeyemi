@@ -76,7 +76,7 @@ export const searchProduct = async (req, res) => {
         const products = await Product.find({ title: { $regex: searchQuery, $options: 'i' }, })
         res.status(200).json(products)
     } catch (error) {
-      res.status(500).json(error)
+        res.status(500).json(error)
     }
 }
 
@@ -128,7 +128,7 @@ export const deleteProduct = async (req, res) => {
         await Product.findByIdAndRemove(req.params.id)
         res.status(200).json("Product deleted successfully")
     }
-    catch (error){
+    catch (error) {
         res.status(500).json(error)
     }
 }
