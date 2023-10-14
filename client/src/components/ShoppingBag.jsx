@@ -27,7 +27,7 @@ const ShoppingBag = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log("cartbbbb" , cartItems)
+  console.log("cartbbbb", cartItems);
   return (
     <>
       <div

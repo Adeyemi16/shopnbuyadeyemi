@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Modal, Button, Spinner } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { BiUser } from "react-icons/bi";
 import {
   AiOutlineClose,
@@ -39,7 +39,6 @@ const Account = () => {
   };
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const onSubmitHandler = async ({ username, email, password }) => {
     setLoading(true);

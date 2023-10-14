@@ -4,7 +4,7 @@ import { StateContext } from "./config/store";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { Suspense, lazy } from "react";
 import Loader from "./utils/Loader";
-const Routespath = lazy(() => import("./routes/Routespath"));
+const Routespath = lazy(() => import("./routes/Routespath.jsx"));
 
 function Load() {
   return (
