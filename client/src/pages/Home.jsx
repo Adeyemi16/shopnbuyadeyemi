@@ -17,7 +17,7 @@ export default function Home() {
   if (error) return <p className="mt-5 py-5">{error.message}</p>;
   return (
     <section className="py-5">
-      <div className="banner">
+      <div className="bannerA"> 
         <div className="layout-container d-flex flex-column justify-content-center align-items-center h-100">
           <p className="text-uppercase fw-medium">New season</p>
           <h1 className="fs-1 fw-bold">The Summer Edit</h1>

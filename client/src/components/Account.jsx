@@ -158,7 +158,7 @@ const Account = () => {
                     {errors.password.message}
                   </span>
                 )}
-                <Button
+                <Button 
                   variant="dark"
                   type="submit"
                   size="lg"
